@@ -1,0 +1,152 @@
+
+(session tutorial1.ses
+  (base_design tutorial1.dsn)
+  (placement
+    (resolution um 10)
+    (component LED_THT:LED_D5.0mm
+      (place D1 1041400 4216400 front 0)
+    )
+    (component Connector:Banana_Jack_3Pin
+      (place J1 1181100 4038600 front 0)
+    )
+    (component Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical
+      (place R1 1079500 4127500 front 0)
+    )
+    (component Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical::1
+      (place R2 1403150 4233050 front 0)
+    )
+    (component "Package_DIP:DIP-8_W7.62mm"
+      (place U1 1219200 4203700 front 90)
+    )
+  )
+  (was_is
+  )
+  (routes 
+    (resolution um 10)
+    (parser
+      (host_cad "KiCad's Pcbnew")
+      (host_version "5.1.6-c6e7f7d~87~ubuntu18.04.1")
+    )
+    (library_out 
+      (padstack "Via[0-3]_800:400_um"
+        (shape
+          (circle F.Cu 8000 0 0)
+        )
+        (shape
+          (circle In1.Cu 8000 0 0)
+        )
+        (shape
+          (circle In2.Cu 8000 0 0)
+        )
+        (shape
+          (circle B.Cu 8000 0 0)
+        )
+        (attach off)
+      )
+    )
+    (network_out 
+      (net "Net-(D1-Pad1)"
+        (wire
+          (path In2.Cu 2500
+            1041400 4216400
+            1053653 4216400
+          )
+        )
+        (wire
+          (path In2.Cu 2500
+            1244600 4279900
+            1233347 4279900
+          )
+        )
+        (wire
+          (path In2.Cu 2500
+            1233347 4279900
+            1233347 4277086
+            1184914 4228653
+            1061310 4228653
+            1053653 4220996
+            1053653 4216400
+          )
+        )
+      )
+      (net "Net-(D1-Pad2)"
+        (wire
+          (path In1.Cu 2500
+            1079500 4127500
+            1079500 4203700
+            1066800 4216400
+          )
+        )
+      )
+      (net VCC
+        (wire
+          (path In1.Cu 2500
+            1181100 4127500
+            1181100 4038600
+          )
+        )
+        (wire
+          (path In1.Cu 2500
+            1219200 4192447
+            1181100 4154347
+            1181100 4127500
+          )
+        )
+        (wire
+          (path In1.Cu 2500
+            1104900 4127500
+            1181100 4127500
+          )
+        )
+        (wire
+          (path In1.Cu 2500
+            1219200 4203700
+            1219200 4192447
+          )
+        )
+      )
+      (net GND
+        (wire
+          (path In1.Cu 2500
+            1219200 4279900
+            1230453 4279900
+          )
+        )
+        (wire
+          (path In1.Cu 2500
+            1230453 4279900
+            1230453 4277086
+            1238892 4268647
+            1250753 4268647
+            1480800 4038600
+          )
+        )
+      )
+      (net "Net-(J1-Pad2)"
+        (wire
+          (path B.Cu 2500
+            1428550 4233050
+            1428550 4136150
+            1331000 4038600
+          )
+        )
+      )
+      (net /INPUT
+        (wire
+          (path In2.Cu 2500
+            1270000 4279900
+            1281253 4279900
+          )
+        )
+        (wire
+          (path In2.Cu 2500
+            1281253 4279900
+            1281253 4277087
+            1325290 4233050
+            1403150 4233050
+          )
+        )
+      )
+    )
+  )
+)
